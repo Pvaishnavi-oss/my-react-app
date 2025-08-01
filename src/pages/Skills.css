@@ -1,0 +1,61 @@
+/* Skills.css */
+
+.skills-section {
+  min-height: 100vh;
+  background-color: black;
+  color: white;
+  padding: 4rem 1rem;
+}
+
+.skills-container {
+  max-width: 64rem;
+  margin: 0 auto; 
+  text-align: center; 
+}
+
+.skills-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.skills-description {
+  text-align: center;
+  color: #9ca3af; /* Tailwind's text-gray-400 */
+  margin-bottom: 3rem;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.skill-item {
+}
+
+.skill-label {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.25rem;
+}
+
+.skill-bar-bg {
+  background-color: #374151; /* Tailwind's gray-700 */
+  border-radius: 9999px;
+  height: 10px;
+  width: 100%;
+}
+
+.skill-bar-fill {
+  background-color: #facc15; /* Tailwind's yellow-400 */
+  height: 10px;
+  border-radius: 9999px;
+}

@@ -1,0 +1,88 @@
+.home-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: black;
+  color: white;
+  padding: 80px 100px;
+  min-height: 100vh;
+   flex-wrap: wrap; 
+}
+
+.text-section {
+  max-width: 50%;
+}
+
+.greeting {
+  color: #f0b018;
+  font-weight: bold;
+  margin-bottom: 50px;
+  font-size: 56px;
+}
+
+h1 {
+  font-size: 56px;
+  font-weight: 800;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.highlight {
+  color: #f0b018;
+}
+
+.subheading {
+font-size: 2.1rem; 
+  color: white;
+  margin-top: 1.5rem;
+  min-height: 50px;
+}
+
+.cursor {
+  display: inline-block;
+  width: 1px;
+  background-color: white;
+  animation: blink 1s step-start infinite;
+  margin-left: 4px;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+.button-group {
+  display: flex;
+  gap: 20px;
+}
+
+.hire-btn {
+  background: #f0b018;
+  border: none;
+  padding: 12px 28px;
+  font-weight: bold;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.work-btn {
+  background: transparent;
+  border: 2px solid white;
+  padding: 12px 28px;
+  color: white;
+  font-weight: bold;
+  border-radius: 30px;
+  cursor: pointer;
+}
+.image-section img {
+  filter: none !important;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+.image-section {
+    flex: 1;
+  max-width: 350px;
+  text-align: center;
+}
+
