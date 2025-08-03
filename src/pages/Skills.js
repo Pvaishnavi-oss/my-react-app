@@ -18,7 +18,11 @@ const Skills = () => {
   return (
     <div className="skills-section">
       <div className="skills-container">
-        <h1 className="skills-title">My Skills</h1>
+        <h1 className="skills-heading">
+  <span className="overlay-text">Skills</span>
+   Skills
+</h1>
+
         <p className="skills-description">
           "Code whisperer by day, bug-squasher by night—creating smooth apps and websites one line at a time."
         </p>

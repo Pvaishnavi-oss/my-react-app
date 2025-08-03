@@ -1,4 +1,4 @@
-    import React from "react";
+import React from "react";
 import "./resume.css";
 
 const data = {
@@ -9,6 +9,22 @@ const data = {
       org: "Seneca Polytechnic – ITS Information Solutions",
       location: "Toronto, Ontario, Canada",
       mode: "HYBRID",
+      bullets: [
+        "Led version migration of legacy Angular applications, improving performance and compatibility with modern frameworks.",
+        "Revamped UI components and made application layouts fully mobile responsive to enhance user experience across devices.",
+      ],
+    },
+    {
+      date: "Nov 2023 – Present",
+      title: "Team Lead",
+      org: "Prince St. Pizza",
+      location: "Toronto, Ontario, Canada",
+      mode: "PART–TIME",
+      bullets: [
+        "Lead a team of about 15 employees, ensuring consistent quality and service to over 300 customers daily.",
+        "Managed inventory and coordinated tasks for timely preparation and service.",
+        "Resolved customer conflicts efficiently to maintain a positive business reputation.",
+      ],
     },
   ],
   education: [
@@ -18,51 +34,67 @@ const data = {
       title: "Honours Bachelor of Technology – Software Development",
       org: "Seneca Polytechnic",
       location: "Toronto, Ontario, Canada",
+      bullets: [
+        "Cumulative GPA: 3.8/4 (1x President’s Honour List)",
+        "Specialization: Software Development, GUI Designing (Figma)",
+        "Web Development: Responsive Design, UX/UI Development.",
+      ],
     },
-  ],
-  projects: [
     {
-      name: "Smart Attendance System",
-      description:
-        "Built a real-time facial recognition-based attendance system using Python and OpenCV.",
-      tools: "Python, OpenCV, Flask",
+      date: "Sept 2024 – Dec 2024",
+      title: "Cultural Intelligence Badge",
+      org: "Seneca Polytechnic",
+      location: "Toronto, Ontario, Canada",
+      bullets: [
+        "Developed intercultural communication and collaboration skills.",
+        "Applied the Intercultural Development Inventory (IDI) to assess and advance intercultural competence.",
+        "Earned the badge by meeting criteria related to self-awareness, inclusive communication, and teamwork.",
+      ],
     },
   ],
 };
 
-const Card = ({ heading, items, type }) => (
+// ✅ CardHeading as inner function
+const CardHeading = ({ text }) => (
+  <h2 className="card-heading">{text}</h2>
+);
+
+// ✅ Card component
+const Card = ({ heading, items }) => (
   <div className="card">
-    <h2 className="card-heading">{heading}</h2>
+    <CardHeading text={heading} />
     {items.map((item, index) => (
       <div key={index} className="card-item">
         <p className="card-date">
-          {item.date} {item.expected ? "(Expected)" : ""}
+          {item.date} {item.expected ? <span className="expected">(Expected)</span> : ""}
         </p>
-        <p className="card-title">{item.title || item.name}</p>
-        {type !== "projects" && (
-          <>
-            <p className="card-org">{item.org}</p>
-            <p className="card-location">{item.location}</p>
-            {item.mode && <p className="card-mode">({item.mode})</p>}
-          </>
-        )}
-        {type === "projects" && (
-          <>
-            <p className="card-description">{item.description}</p>
-            <p className="card-tools">Tools: {item.tools}</p>
-          </>
+        <p className="card-title">{item.title}</p>
+        <p className="card-org">{item.org}</p>
+        <p className="card-location">
+          {item.location} {item.mode && <span className="card-mode">({item.mode})</span>}
+        </p>
+        {item.bullets && (
+          <ul className="card-description">
+            {item.bullets.map((point, i) => (
+              <li key={i}>{point}</li>
+            ))}
+          </ul>
         )}
       </div>
     ))}
   </div>
 );
 
+// ✅ Main Exported Component
 export default function ProfilePage() {
   return (
     <div className="profile-section">
-      <Card heading="EXPERIENCE" items={data.experience} type="experience" />
-      <Card heading="EDUCATION" items={data.education} type="education" />
-      <Card heading="PROJECTS" items={data.projects} type="projects" />
+      <h1 className="resume-heading">
+        <span className="overlay-text">Resume</span>
+        Resume
+      </h1>
+      <Card heading="EXPERIENCE" items={data.experience} />
+      <Card heading="EDUCATION" items={data.education} />
     </div>
   );
 }

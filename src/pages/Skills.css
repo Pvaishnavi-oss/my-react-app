@@ -59,3 +59,22 @@
   height: 10px;
   border-radius: 9999px;
 }
+
+.skills-heading {
+  position: relative;
+  font-size: 6rem; /* Big shadow text */
+  font-weight: 900;
+  color: #111;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.skills-heading .overlay-text {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-40%);
+  color: white;
+  font-size: 2rem; /* Smaller text on top */
+  font-weight: bold;
+}

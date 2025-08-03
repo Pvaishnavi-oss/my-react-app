@@ -1,30 +1,61 @@
-/* ProfilePage.css */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: black;
+  color: white;
+}
 
+/* Resume Main Section */
 .profile-section {
   min-height: 100vh;
-  background-color: #1f2937; /* Tailwind's gray-900 */
-  padding: 1.5rem;
-  color: white;
+  background-color: black;
+  padding: 2rem;
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 2rem;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
 }
 
 @media (min-width: 768px) {
   .profile-section {
     flex-direction: row;
+    align-items: flex-start;
   }
 }
 
-.card {
-  background-color: black;
-  color: white;
-  padding: 1rem;
-  border-radius: 0.5rem;
+/* Resume Heading */
+.resume-heading {
+  position: relative;
+  font-size: 6rem;
+  font-weight: 900;
+  color: #111;
+  text-align: center;
   width: 100%;
 }
+
+.resume-heading .overlay-text {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-size: 2.25rem;
+  font-weight: bold;
+}
+
+/* Cards */
+.card {
+  background-color: #1f1f1f !important; /* 🔁 Force dark gray background */
+  color: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 600px;
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.05);
+}
+
 
 @media (min-width: 768px) {
   .card {
@@ -33,27 +64,37 @@
 }
 
 .card-heading {
-  background-color: #facc15; /* Tailwind's yellow-400 */
-  color: black;
-  font-weight: bold;
-  padding: 0.5rem 1rem;
-  font-size: 1.25rem;
-  margin-bottom: 1rem;
-  display: inline-block;
+  background-color: #facc15;
+  color: #111;
+  font-weight: 900;
+  font-size: 1.5rem;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  border-radius: 8px;
 }
 
 .card-item {
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
 }
 
 .card-date {
-  color: #facc15;
   font-weight: bold;
+  font-size: 1.125rem;
+  color: #facc15;
+}
+
+.expected {
+  color: #facc15;
+  margin-left: 5px;
 }
 
 .card-title {
-  font-size: 1.125rem;
+  font-size: 1.5rem;
   font-weight: 600;
+  margin: 0.25rem 0;
+ color: white !important;
+
 }
 
 .card-org {
@@ -63,21 +104,32 @@
 }
 
 .card-location {
-  color: #9ca3af; /* Tailwind's gray-400 */
+  color: white;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
 }
 
 .card-mode {
+  color: #facc15;
+  font-weight: 500;
   text-transform: uppercase;
-  font-size: 0.875rem;
+  font-size: 0.85rem;
+  margin-left: 4px;
 }
 
+/* Bullet Points */
 .card-description {
-  font-size: 0.875rem;
-  color: #d1d5db; /* Tailwind's gray-300 */
+  padding-left: 1.25rem;
+  margin-top: 0.5rem;
 }
 
-.card-tools {
-  color: #fde68a; /* Tailwind's yellow-300 */
-  font-size: 0.75rem;
-  margin-top: 0.25rem;
+.card-description li {
+  list-style-type: disc;
+  margin-bottom: 0.5rem;
+  color: white; /* Tailwind gray-300 */
+  font-size: 0.95rem;
+}
+
+.card-description li strong {
+  color: white;
 }

@@ -7,11 +7,15 @@ export default function About() {
   return (
     <div className="about-page">
       <div className="about-image">
-        <img src="/Assets/svg/profile3.svg" alt="Vaishnavi Phapale" />
+        <img src="/Assets/svg/myphoto.jpg" alt="Vaishnavi Phapale" />
       </div>
 
       <div className="about-content">
-        <h1>About Me</h1>
+        <h2 className="services-heading">
+  <span className="overlay-text">About</span>
+  About
+</h2>
+
         <p>
           Hello! I'm <strong>Vaishnavi Phapale</strong>, a passionate frontend developer with a love for crafting
           beautiful, user-friendly web applications. With a strong foundation in React, Angular, and modern web

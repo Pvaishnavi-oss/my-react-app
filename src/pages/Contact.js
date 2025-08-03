@@ -26,7 +26,12 @@ export default function ContactForm() {
   return (
     <div className="contact-page">
       {/* 🔹 PAGE heading */}
-      <h1 className="page-heading">Get in Touch</h1>
+      <h2 className="contact-heading">
+  <span className="overlay-text">Contact</span>
+  Contact
+</h2>
+
+
 
       {/* 🔸 FORM section */}
       <div className="contact-form-container">

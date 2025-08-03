@@ -32,7 +32,11 @@ const Services = () => {
   return (
     <div className="services-section">
       <div className="services-container">
-        <h2 className="text-4xl font-bold mb-12">Services</h2>
+        <h2 className="services-heading">
+  <span className="overlay-text">Services</span>
+  Services
+</h2>
+
         <div className="services-grid">
           {services.map((service, index) => (
             <div key={index} className="service-card">

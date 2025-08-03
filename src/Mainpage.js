@@ -8,6 +8,7 @@ import Services from './pages/Services';
 import Skills from './pages/Skills';
 import Projects from './pages/Project';
 import Contact from './pages/Contact';
+import Resume from "./pages/resume"; // Use uppercase 'Resume'
 
 
 export default function MainPage() {
@@ -24,8 +25,9 @@ export default function MainPage() {
       </section>
 
       <section id="resume">
-        <resume />
-      </section>
+  <Resume />
+</section>
+
 
       <section id="services">
         <Services />
@@ -35,8 +37,8 @@ export default function MainPage() {
         <Skills />
       </section>
 
-      <section id="projects">
-        <Projects />
+      <section id="project">
+        <Projects/>
       </section>
 
       <section id="contact">
