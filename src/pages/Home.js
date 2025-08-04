@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import './Home.css';
 
 export default function Home() {
-  const navigate = useNavigate();
+
 
   const subheadings = [
     'Final year Student of D.Y.Patil.Collage',
@@ -49,9 +49,6 @@ export default function Home() {
     return () => clearTimeout(timeout);
   }, [charIndex, typing, subIndex]);
 
-  const handleHireMeClick = () => {
-    navigate('/contact');
-  };
 
   return (
     <section className="home-container">
@@ -68,7 +65,7 @@ export default function Home() {
         </p>
 
         <div className="button-group">
-          <button className="hire-btn" onClick={handleHireMeClick}>
+          <button className="hire-btn" >
             HIRE ME
           </button>
           <button className="work-btn">MY WORKS</button>
