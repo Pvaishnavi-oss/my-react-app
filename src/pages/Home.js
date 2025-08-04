@@ -73,7 +73,7 @@ export default function Home() {
       </div>
 
       <div className="image-section">
-        <img src="/Assets/svg/profile3.svg" alt="Profile" />
+        <img src="/myprofile/public/Assets/svg/myphoto.jpg" alt="Profile" />
       </div>
     </section>
   );
