@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Home.css';
 
 export default function Home() {
+  const navigate = useNavigate();
+
   const subheadings = [
     'Final year Student of D.Y.Patil.Collage',
     'Frontend Developer by weekday',
@@ -9,9 +12,9 @@ export default function Home() {
   ];
 
   const [displayText, setDisplayText] = useState('');
-  const [subIndex, setSubIndex] = useState(0); // which subheading
-  const [charIndex, setCharIndex] = useState(0); // which character
-  const [typing, setTyping] = useState(true); // typing or deleting
+  const [subIndex, setSubIndex] = useState(0);
+  const [charIndex, setCharIndex] = useState(0);
+  const [typing, setTyping] = useState(true);
 
   useEffect(() => {
     const currentLine = subheadings[subIndex];
@@ -19,36 +22,36 @@ export default function Home() {
     let timeout;
 
     if (typing) {
-      // Typing characters
       if (charIndex < currentLine.length) {
         timeout = setTimeout(() => {
           setDisplayText((prev) => prev + currentLine[charIndex]);
           setCharIndex((prev) => prev + 1);
         }, 80);
       } else {
-        // Done typing → wait, then start deleting
         timeout = setTimeout(() => {
           setTyping(false);
-        }, 1500); // Pause after full line
+        }, 1500);
       }
     } else {
-      // Deleting characters
       if (charIndex > 0) {
         timeout = setTimeout(() => {
           setDisplayText((prev) => prev.slice(0, -1));
           setCharIndex((prev) => prev - 1);
         }, 30);
       } else {
-        // Move to next line
         timeout = setTimeout(() => {
           setSubIndex((prev) => (prev + 1) % subheadings.length);
           setTyping(true);
-        }, 300); // Pause before typing new line
+        }, 300);
       }
     }
 
     return () => clearTimeout(timeout);
   }, [charIndex, typing, subIndex]);
+
+  const handleHireMeClick = () => {
+    navigate('/contact');
+  };
 
   return (
     <section className="home-container">
@@ -59,22 +62,22 @@ export default function Home() {
           <span className="highlight">phapale</span>
         </h1>
 
-        <p className="subheading">{displayText}<span className="cursor">|</span></p>
+        <p className="subheading">
+          {displayText}
+          <span className="cursor">|</span>
+        </p>
 
         <div className="button-group">
-          <button className="hire-btn">HIRE ME</button>
+          <button className="hire-btn" onClick={handleHireMeClick}>
+            HIRE ME
+          </button>
           <button className="work-btn">MY WORKS</button>
         </div>
       </div>
 
       <div className="image-section">
-        <img src={"/Assets/svg/profile3.svg"} 
-        alt="Profile" />
+        <img src="/Assets/svg/profile3.svg" alt="Profile" />
       </div>
     </section>
-    
-
-    
   );
 }
-

@@ -5,9 +5,9 @@ const data = {
   experience: [
     {
       date: "May 2025 – Present",
-      title: "Senior Technologist – Software Development (Co-op)",
-      org: "Seneca Polytechnic – ITS Information Solutions",
-      location: "Toronto, Ontario, Canada",
+      title: "Frontend developer  – Software Development (Co-op)",
+      org: "Global biotech – ",
+      location: "Thane , mumbai(maharashtra)",
       mode: "HYBRID",
       bullets: [
         "Led version migration of legacy Angular applications, improving performance and compatibility with modern frameworks.",
@@ -17,11 +17,11 @@ const data = {
     {
       date: "Nov 2023 – Present",
       title: "Team Lead",
-      org: "Prince St. Pizza",
-      location: "Toronto, Ontario, Canada",
-      mode: "PART–TIME",
+      org: "Applied cloud computing",
+      location: "Thane west, maharashtra",
+      mode: "FULL–TIME",
       bullets: [
-        "Lead a team of about 15 employees, ensuring consistent quality and service to over 300 customers daily.",
+        "Support angular application to small changes of existing application .",
         "Managed inventory and coordinated tasks for timely preparation and service.",
         "Resolved customer conflicts efficiently to maintain a positive business reputation.",
       ],
@@ -31,20 +31,20 @@ const data = {
     {
       date: "Jan 2023 – Aug 2026",
       expected: true,
-      title: "Honours Bachelor of Technology – Software Development",
-      org: "Seneca Polytechnic",
-      location: "Toronto, Ontario, Canada",
+      title: "master in computer application – Software Development",
+      org: "SPPU",
+      location: "Pune, maharashtra",
       bullets: [
         "Cumulative GPA: 3.8/4 (1x President’s Honour List)",
-        "Specialization: Software Development, GUI Designing (Figma)",
-        "Web Development: Responsive Design, UX/UI Development.",
+        "Specialization: cloud computing",
+        "Web Development: Responsive Design, UX/UI Development, angular ,database management system",
       ],
     },
     {
       date: "Sept 2024 – Dec 2024",
       title: "Cultural Intelligence Badge",
-      org: "Seneca Polytechnic",
-      location: "Toronto, Ontario, Canada",
+      org: "D.y.patil collage of mca",
+      location: "pune,  maharashtra",
       bullets: [
         "Developed intercultural communication and collaboration skills.",
         "Applied the Intercultural Development Inventory (IDI) to assess and advance intercultural competence.",
