@@ -14,12 +14,17 @@ export default function Project() {
       <div className="project-images">
         <div className="project-card">
           <img src="/Assets/svg/global.png" alt="Project 1" className="project-img" />
-          <p className="project-title">global biotech</p>
+          <p className="project-title">Global Biotech "Bovin IVF Made simple"</p>
         </div>
 
         <div className="project-card">
           <img src="/Assets/svg/globalc.png" alt="Project 2" className="project-img" />
           <p className="project-title">customer page</p>
+        </div>
+
+        <div className="project-card">
+          <img src="/Assets/svg/Rename.png" alt="Project 2" className="project-img" />
+          <p className="project-title">Global Biotech home page image</p>
         </div>
       </div>
     </div>
